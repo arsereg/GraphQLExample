@@ -1,0 +1,45 @@
+type Query{
+    searchAddresses(
+        city: String
+    ): [Address]
+}
+
+type Mutation{
+    createAddress(
+        address: Address
+    ): Address
+}
+
+
+type Address{
+    id: Int,
+    street: String,
+    city: String,
+    zip: String,
+    country: String
+}
+
+type Product{
+    id: Int,
+    name: String,
+    description: String,
+    price: Float,
+    SKU: String
+}
+
+type Invoice{
+    id: Int,
+    currency: String,
+    customerId: Int,
+    invoiceDate: String,
+    productList: [Product],
+}
+
+type Customer{
+    id: Int,
+    name: String,
+    email: String,
+    phone: String,
+    address: Address,
+    invoices: [Invoice]
+}

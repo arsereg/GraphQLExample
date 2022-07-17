@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:49955/postgres
+    username: admin
+    password: password
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        dll-auto: create
+        hbm2ddl:
+          auto: create
